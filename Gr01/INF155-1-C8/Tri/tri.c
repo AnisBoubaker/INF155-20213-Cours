@@ -39,3 +39,25 @@ void tri_insertion(int tab[], int taille)
 		tab[j] = x;
 	}
 }
+
+void tri_selection(int tab[], int taille)
+{
+	int indice_min; 
+	for (int i = 0; i < taille; i++)
+	{
+		indice_min = i;
+		for (int j = i + 1; j < taille ; j++)
+		{
+			if (tab[j] < tab[indice_min])
+			{
+				indice_min = j;
+			}
+		}
+		if (indice_min != i)
+		{
+			int temp = tab[indice_min];
+			tab[indice_min] = tab[i];
+			tab[i] = temp;
+		}
+	}
+}
