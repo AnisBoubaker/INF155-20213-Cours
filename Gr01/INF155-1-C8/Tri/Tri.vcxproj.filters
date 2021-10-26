@@ -18,5 +18,13 @@
     <ClCompile Include="tri.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos_tri.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="algos_tri.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

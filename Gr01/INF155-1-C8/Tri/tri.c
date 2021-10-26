@@ -2,62 +2,41 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "algos_tri.h"
 
 #define TAILLE_MAX 100
 
-void tri_insertion(int tab[], int taille);
+
+
 
 int main(void)
 {
-	int tab[TAILLE_MAX] = { 44, 10, 20, 55, 10, 24, 35 };
+	int tab1[TAILLE_MAX] = { 44, 10, 20, 55, 10, 24, 35 };
+	int tab2[TAILLE_MAX] = { 44, 10, 20, 55, 10, 24, 35 };
+	int tab3[TAILLE_MAX] = { 44, 10, 20, 55, 10, 24, 35 };
 
-	tri_insertion(tab, 7);
+	int coords[TAILLE_MAX][2] = {
+		{55, 10},
+		{20, 15},
+		{20, 2}, 
+		{35, 10}
+	};
 
-	for (int i = 0; i < 7; i++)
+	tri_insertion(tab1, 7);
+	afficher_tab(tab1, 7);
+	
+	tri_selection(tab2, 7);
+	afficher_tab(tab2, 7);
+
+	tri_bulle(tab3, 7);
+	afficher_tab(tab3, 7);
+
+	tri_coords(coords, 4);
+	for (int i = 0; i < 4; i++)
 	{
-		printf("%d\t", tab[i]);
+		printf("(%d, %d)\n", coords[i][0], coords[i][1]);
 	}
-	printf("\n");
 
 	system("pause");
 	return 0;
-}
-
-void tri_insertion(int tab[], int taille)
-{
-	int x; 
-	int j;
-	for (int i = 1; i < taille; i++)
-	{
-		x = tab[i];
-		j = i;
-		while (j > 0 && tab[j - 1] > x)
-		{
-			tab[j] = tab[j - 1];
-			j--;
-		}
-		tab[j] = x;
-	}
-}
-
-void tri_selection(int tab[], int taille)
-{
-	int indice_min; 
-	for (int i = 0; i < taille; i++)
-	{
-		indice_min = i;
-		for (int j = i + 1; j < taille ; j++)
-		{
-			if (tab[j] < tab[indice_min])
-			{
-				indice_min = j;
-			}
-		}
-		if (indice_min != i)
-		{
-			int temp = tab[indice_min];
-			tab[indice_min] = tab[i];
-			tab[i] = temp;
-		}
-	}
 }
