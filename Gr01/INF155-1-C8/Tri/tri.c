@@ -22,6 +22,7 @@ int main(void)
 		{35, 10}
 	};
 
+
 	tri_insertion(tab1, 7);
 	afficher_tab(tab1, 7);
 	
