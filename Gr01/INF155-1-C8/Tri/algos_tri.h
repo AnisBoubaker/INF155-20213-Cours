@@ -30,6 +30,4 @@ void tri_coords(int tab[][2], int taille);
 
 
 
-
-
 #endif

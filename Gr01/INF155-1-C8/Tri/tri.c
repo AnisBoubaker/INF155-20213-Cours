@@ -6,9 +6,6 @@
 
 #define TAILLE_MAX 100
 
-
-
-
 int main(void)
 {
 	int tab1[TAILLE_MAX] = { 44, 10, 20, 55, 10, 24, 35 };
@@ -21,7 +18,6 @@ int main(void)
 		{20, 2}, 
 		{35, 10}
 	};
-
 
 	tri_insertion(tab1, 7);
 	afficher_tab(tab1, 7);
