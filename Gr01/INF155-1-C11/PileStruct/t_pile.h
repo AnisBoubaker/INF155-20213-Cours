@@ -3,12 +3,13 @@
 
 #include "t_coordonnee.h"
 
-#define CAPACITE 100
+#define TAILLE_INCREMENT 10
 
 typedef struct pile
 {
-	t_coordonnee* contenu[CAPACITE];
+	t_coordonnee** contenu; //Ptr vers un tableau 1D de t_coordonnee*
 	int nb_elements;
+	int capacite_max;
 } t_pile;
 
 t_pile* t_pile_init(void);

@@ -54,6 +54,9 @@ int main(void)
 		t_coordonnee_afficher(valeur_depilee);
 	}
 
+
+	t_pile_free(la_pile);
+
 	system("pause");
 	return 0;
 }
