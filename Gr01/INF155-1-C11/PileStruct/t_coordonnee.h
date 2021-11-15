@@ -15,7 +15,7 @@ typedef struct coordonnee
 
 /*
 */
-t_coordonnee* t_coordonnee_init(void);
+t_coordonnee* t_coordonnee_init(double x, double y);
 
 /*
 */

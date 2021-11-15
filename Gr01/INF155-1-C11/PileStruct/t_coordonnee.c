@@ -3,7 +3,7 @@
 #define TAILLE_MAX_BUFFER 100
 
 
-t_coordonnee* t_coordonnee_init(void)
+t_coordonnee* t_coordonnee_init(double x, double y)
 {
 	t_coordonnee* coord;
 
@@ -13,8 +13,8 @@ t_coordonnee* t_coordonnee_init(void)
 		exit(EXIT_FAILURE);
 	}
 
-	coord->x = 0; 
-	coord->y = 0;
+	coord->x = x; 
+	coord->y = y;
 
 	return coord;
 }
