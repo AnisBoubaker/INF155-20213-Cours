@@ -34,3 +34,13 @@ void prd_set_nom(t_produit* prd, const char* nom)
 	}
 	strcpy(prd->nom, nom);
 }
+
+void prd_afficher(t_produit* prd)
+{
+	printf("%s, prix: %.2lf, Qte Stock: %d (Categorie: %s)\n",
+		prd->nom,
+		prd->prix,
+		prd->qte_stock,
+		prd->categorie->nom
+	);
+}

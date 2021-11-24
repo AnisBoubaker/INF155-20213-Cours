@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "mod_categorie.h"
 
 typedef struct t_produit
@@ -21,5 +22,9 @@ t_produit* prd_init(void);
 /*
 */
 void prd_set_nom(t_produit* prd, const char* nom);
+
+/*
+*/
+void prd_afficher(t_produit* prd);
 
 #endif
