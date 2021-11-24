@@ -26,3 +26,8 @@ void cat_free(t_categorie* categorie)
 	free(categorie->nom);
 	free(categorie);
 }
+
+void cat_afficher(t_categorie* categorie)
+{
+	printf("[%d] %s\n", categorie->numero, categorie->nom);
+}

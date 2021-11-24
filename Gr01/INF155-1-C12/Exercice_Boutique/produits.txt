@@ -1,0 +1,4 @@
+5.50 120 10 Soupe a l'oignon
+4.00 30 20 Tomates
+3.50 30 20 Laitue
+2.00 30 20 Oignons

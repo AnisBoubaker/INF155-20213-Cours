@@ -4,6 +4,7 @@
 #include "mod_categorie.h"
 
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct t_produit
 {
@@ -21,6 +22,9 @@ t_produit* prd_init(const char* nom, double prix, int qte_stock, const t_categor
 */
 void prd_free(t_produit* produit);
 
+/*
+*/
+void prd_afficher(t_produit* produit);
 
 
 #endif

@@ -28,3 +28,12 @@ void prd_free(t_produit* produit)
 	free(produit->nom);
 	free(produit);
 }
+
+void prd_afficher(t_produit* produit)
+{
+	printf("%s\t%.2lf$ (%d en stock) - Categorie #\n",
+		produit->nom,
+		produit->prix,
+		produit->qte_stock);
+		//produit->categorie->numero);
+}
