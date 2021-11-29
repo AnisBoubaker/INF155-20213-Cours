@@ -39,3 +39,48 @@ void machine_free(t_machine* machine)
 	free(machine->num_modele);
 	free(machine);
 }
+
+void machine_afficher(const t_machine* machine)
+{
+	printf("Num: %d\n", machine->num);
+	printf("Modele: %s\n", machine->num_modele);
+	printf("Mise en service: %d-%d-%d\n",
+		machine->date_mise_service.jour,
+		machine->date_mise_service.mois,
+		machine->date_mise_service.annee);
+	printf("Derniere maintenance: %d-%d-%d\n",
+		machine->date_maintenance.jour,
+		machine->date_maintenance.mois,
+		machine->date_maintenance.annee);
+}
+
+
+
+t_machine** machines_a_maintenir(const t_machine* liste_machines[], int nb_machines, t_date date_min, int* nb_a_maintenir)
+{
+	t_machine** machines_a_maintenir;
+	
+	*nb_a_maintenir = 0;
+
+	machines_a_maintenir = (t_machine**)malloc(sizeof(t_machine*) * nb_machines);
+	if (!machines_a_maintenir)
+	{
+		exit(EXIT_FAILURE);
+	}
+
+	for (int i = 0; i < nb_machines; i++)
+	{
+		if (date_cmp(liste_machines[i]->date_maintenance, date_min) < 0)
+		{
+			machines_a_maintenir[*nb_a_maintenir] = liste_machines[i];
+			(*nb_a_maintenir)++;
+		}
+	}
+	machines_a_maintenir = (t_machine**)realloc(machines_a_maintenir, sizeof(t_machine*) * (*nb_a_maintenir));
+	if (!machines_a_maintenir)
+	{
+		exit(EXIT_FAILURE);
+	}
+
+	return machines_a_maintenir;
+}

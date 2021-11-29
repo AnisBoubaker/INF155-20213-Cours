@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "mod_date.h"
 
 typedef struct t_machine
@@ -50,9 +51,9 @@ ENTREES:
 SORTIE: 
 Tableau dynamique de références vers des machines qui doivent être maintenues.
 */
-t_machine** machines_a_maintenir(t_machine* liste_machines[], int nb_machines, t_date date_min);
+t_machine** machines_a_maintenir(const t_machine* liste_machines[], int nb_machines, t_date date_min, int* nb_a_maintenir);
 
 /*
 */
-
+void machine_afficher(const t_machine* machine);
 #endif
