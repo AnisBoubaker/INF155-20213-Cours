@@ -1,11 +1,13 @@
 #ifndef MOD_MACHINE__H_
 #define MOD_MACHINE__H_
 
+#include <stdlib.h>
+#include <string.h>
 #include "mod_date.h"
 
 typedef struct t_machine
 {
-	char* num;
+	int num;
 	char* num_modele;
 	t_date date_mise_service;
 	t_date date_maintenance; 
@@ -24,7 +26,7 @@ Une référence vers la nouvelle machine allouée avec les champs num et num_modele
 initialisés. Les dates de mise en service et de maintenance seront les dates 
 nulles (0-0-0). En cas d'erreur d'allocation mémoire, la fonction retourne NULL.
 */
-t_machine* machine_init(const char* num, const char* num_modele);
+t_machine* machine_init(const char* num_modele);
 
 /*
 Libère l'espace mémoire d'une machine. 

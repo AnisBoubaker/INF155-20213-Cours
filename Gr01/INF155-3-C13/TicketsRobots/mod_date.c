@@ -1,5 +1,15 @@
 #include "mod_date.h"
 
+/***PROTOTYPES DES FONCTIONS PRIVEES ***/
+/*
+*/
+static int est_bissextile(int annee);
+
+/*
+*/
+static int max_jours_mois(e_mois mois, int annee);
+
+
 int date_cmp(t_date date1, t_date date2)
 {
 	if (date1.annee != date2.annee)
@@ -14,12 +24,12 @@ int date_cmp(t_date date1, t_date date2)
 }
 
 
-int est_bissextile(int annee)
+static int est_bissextile(int annee)
 {
 	return (annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0;
 }
 
-int max_jours_mois(e_mois mois, int annee)
+static int max_jours_mois(e_mois mois, int annee)
 {
 	int nb_jours;
 

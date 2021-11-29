@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "mod_date.h"
+#include "mod_machine.h"
 
 
 int main(void)
@@ -18,9 +19,18 @@ int main(void)
 		printf("%d-%d-%d\n", date1.jour, date1.mois, date1.annee);
 	}
 	else {
-		printf("Date invalide!");
+		printf("Date invalide!\n");
 	}
 
+	/******************/
+	t_machine* m1; 
+	t_machine* m2;
+
+	m1 = machine_init("WSR5645");
+	m2 = machine_init("EWS8978");
+
+	printf("Numero de m1: %d\n", m1->num);
+	printf("Numero de m2: %d\n", m2->num);
 	
 
 	system("pause");
