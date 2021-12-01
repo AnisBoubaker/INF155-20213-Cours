@@ -50,9 +50,11 @@ int nb_jours_max(int mois, int annee)
 		{
 			nb_jours_max = 28;
 		}
+		break;
 	default:
 		nb_jours_max = 0;
 	}
+	return nb_jours_max;
 }
 
 int date_set_date(t_date * date, int jour, int mois, int annee)

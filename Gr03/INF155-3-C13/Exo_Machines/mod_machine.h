@@ -1,7 +1,10 @@
 #ifndef MOD_MACHINE__H_
 #define MOD_MACHINE__H_
 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdlib.h>
 #include "mod_date.h"
+#include <string.h>
 
 typedef struct t_machine
 {
