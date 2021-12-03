@@ -39,7 +39,7 @@ SORTIE:
 Valeur vraie si la date a bien été modifiée, valeur fausse sinon (en cas
 d'erreur)
 */
-int date_set_date(t_date* date, int jour, int mois, int annee);
+int date_set_date(t_date* date, int jour, e_mois mois, int annee);
 
 
 #endif
