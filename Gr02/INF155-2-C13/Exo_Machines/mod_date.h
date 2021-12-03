@@ -1,10 +1,14 @@
 #ifndef MOD_DATE__H_
 #define MOD_DATE__H_
 
+typedef enum e_mois {JANVIER=1, FEVRIER, MARS, AVRIL, MAI, JUIN, 
+					JUILLET, AOUT, SEPTEMBRE, OCTOBRE, 
+					NOVEMBRE, DECEMBRE} e_mois;
+
 typedef struct t_date
 {
 	int jour;
-	int mois;
+	e_mois mois;
 	int annee;
 } t_date;
 
